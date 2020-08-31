@@ -29,8 +29,8 @@ def shopSmart(orderList, fruitShops):
         orderList: List of (fruit, numPound) tuples
         fruitShops: List of FruitShops
     """
-    "*** YOUR CODE HERE ***"
-    return None
+    costs = [sum([order[1] * fruitShop.fruitPrices[order[0]] for order in orderList]) for fruitShop in fruitShops]
+    return fruitShops[costs.index(min(costs))]
 
 
 if __name__ == '__main__':
