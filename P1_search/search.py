@@ -92,10 +92,7 @@ def depthFirstSearch(problem):
     visited = []
     S.push(start_node)
 
-    while True:
-        if S.isEmpty():
-            break
-
+    while not S.isEmpty():
         state, action = S.pop()
 
         if problem.isGoalState(state):
@@ -118,10 +115,7 @@ def breadthFirstSearch(problem):
     visited = []
     Q.push(start_node)
 
-    while True:
-        if Q.isEmpty():
-            break
-
+    while not Q.isEmpty():
         state, action = Q.pop()
 
         if problem.isGoalState(state):
